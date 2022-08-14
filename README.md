@@ -58,8 +58,8 @@ you're running a Debian derived Linux distribution you can also refer to the [Al
 
 - Libraries like jsoncpp & librdkafka are also required.
 ```SHELL
-Debian$ sudo apt install libjsoncpp-dev librdkafka-dev libconfig++-dev libspdlog-dev
-Redhat$ sudo yum install jsoncpp-devel librdkafka-devel libconfig-devel spdlog-devel
+Debian$ sudo apt install libjsoncpp-dev librdkafka-dev libconfig++-dev libspdlog-dev libprotobuf-dev
+Redhat$ sudo yum install jsoncpp-devel librdkafka-devel libconfig-devel spdlog-devel protobuf-devel
 ```
 
 #### git Clone, Compile and Run
