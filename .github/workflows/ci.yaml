@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 0 * * *'  # every day at midnight
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Dependencies
+        run: |
+          sudo apt install -y libjsoncpp-dev librdkafka-dev libconfig++-dev libspdlog-dev libprotobuf-dev
+
+      - name: Checkout pmacct
+        uses: actions/checkout@v2
+        with:
+          path: code
+
+      - name: Build code
+        run: |
+          cd code
+          mkdir build
+          cd build
+          cmake ../
+          make
+
