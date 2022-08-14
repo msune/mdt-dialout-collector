@@ -60,3 +60,6 @@ compile_commands.json
 # CSV
 csv/*.csv
 
+#Cmake
+CMakeCache.txt
+CMakeFiles/
